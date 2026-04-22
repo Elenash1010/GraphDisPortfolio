@@ -169,16 +169,22 @@ button,input,textarea{font:inherit}
   position:relative; min-height:660px; border-radius:34px;
   background:linear-gradient(145deg, #FFFFFF 0%, #F7FBFF 100%);
   border:1px solid var(--line); overflow:hidden; box-shadow:var(--shadow);
-  padding:26px;
+  padding:26px; isolation:isolate;
 }
 .hero-stage .hero-frame{
   position:absolute; inset:24px; border-radius:28px;
   border:1px solid rgba(0,158,255,.10); pointer-events:none;
 }
-.hero-stage .hero-topbar{position:absolute; left:40px; top:36px; display:flex; gap:10px}
+.hero-stage .hero-topbar{position:absolute; left:40px; top:36px; display:flex; gap:10px; z-index:12}
 .case-switcher{
   position:absolute; left:40px; top:76px; right:40px;
-  display:flex; gap:10px; flex-wrap:wrap; z-index:2;
+  display:flex; gap:10px; flex-wrap:wrap; z-index:20;
+  width:max-content; max-width:calc(100% - 80px);
+  padding:8px; border-radius:999px;
+  background:rgba(255,255,255,.9);
+  border:1px solid rgba(0,158,255,.12);
+  box-shadow:0 14px 34px rgba(15,23,32,.08);
+  backdrop-filter:blur(12px);
 }
 .case-btn{
   border:1px solid var(--line); background:rgba(255,255,255,.78);
@@ -190,14 +196,14 @@ button,input,textarea{font:inherit}
   color:var(--electric-deep); border-color:#CFEAF1;
 }
 .case-bg-blob{
-  position:absolute; border-radius:46% 54% 60% 40% / 44% 42% 58% 56%;
+  position:absolute; border-radius:46% 54% 60% 40% / 44% 42% 58% 56%; z-index:0;
 }
 .case-bg-blob.a{width:220px;height:220px;left:74px;top:140px;background:linear-gradient(145deg,#EAFBF5,#CCF6E5)}
 .case-bg-blob.b{width:300px;height:300px;right:46px;bottom:54px;background:linear-gradient(145deg,#DFF7FF,#CAF1FF)}
 .case-card{
   position:absolute; inset:136px 54px 78px 54px; border-radius:30px;
   background:linear-gradient(145deg, #FFFFFF 0%, #EEF7FF 100%);
-  border:1px solid rgba(0,158,255,.10); overflow:hidden; display:grid; place-items:center;
+  border:1px solid rgba(0,158,255,.10); overflow:hidden; display:grid; place-items:center; z-index:1;
 }
 .case-media{
   width:78%; aspect-ratio:1 / 1; border-radius:28px; overflow:hidden;
@@ -270,7 +276,7 @@ button,input,textarea{font:inherit}
 .case-caption{
   position:absolute; background:rgba(255,255,255,.92); backdrop-filter:blur(12px);
   border:1px solid var(--line); border-radius:22px; box-shadow:var(--shadow);
-  padding:16px 18px; max-width:250px; z-index:3;
+  padding:16px 18px; max-width:250px; z-index:10;
 }
 .case-caption small{
   display:block; margin-bottom:8px; color:var(--electric-deep); font-size:12px;
