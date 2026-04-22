@@ -165,6 +165,125 @@ button,input,textarea{font:inherit}
 .hero-panel.one{left:28px;bottom:28px}
 .hero-panel.two{right:28px;top:84px}
 
+.hero-stage{
+  position:relative; min-height:660px; border-radius:34px;
+  background:linear-gradient(145deg, #FFFFFF 0%, #F7FBFF 100%);
+  border:1px solid var(--line); overflow:hidden; box-shadow:var(--shadow);
+  padding:26px;
+}
+.hero-stage .hero-frame{
+  position:absolute; inset:24px; border-radius:28px;
+  border:1px solid rgba(0,158,255,.10); pointer-events:none;
+}
+.hero-stage .hero-topbar{position:absolute; left:40px; top:36px; display:flex; gap:10px}
+.case-switcher{
+  position:absolute; left:40px; top:76px; right:40px;
+  display:flex; gap:10px; flex-wrap:wrap; z-index:2;
+}
+.case-btn{
+  border:1px solid var(--line); background:rgba(255,255,255,.78);
+  color:#415266; padding:10px 14px; border-radius:999px; font-weight:700;
+  font-size:13px; cursor:pointer; transition:.22s ease;
+}
+.case-btn.active{
+  background:linear-gradient(90deg, var(--natural-soft), #EAFBFF);
+  color:var(--electric-deep); border-color:#CFEAF1;
+}
+.case-bg-blob{
+  position:absolute; border-radius:46% 54% 60% 40% / 44% 42% 58% 56%;
+}
+.case-bg-blob.a{width:220px;height:220px;left:74px;top:140px;background:linear-gradient(145deg,#EAFBF5,#CCF6E5)}
+.case-bg-blob.b{width:300px;height:300px;right:46px;bottom:54px;background:linear-gradient(145deg,#DFF7FF,#CAF1FF)}
+.case-card{
+  position:absolute; inset:136px 54px 64px 54px; border-radius:30px;
+  background:linear-gradient(145deg, #FFFFFF 0%, #EEF7FF 100%);
+  border:1px solid rgba(0,158,255,.10); overflow:hidden; display:grid; place-items:center;
+}
+.case-media{
+  width:84%; aspect-ratio:1 / 1; border-radius:28px; overflow:hidden;
+  position:relative; box-shadow:0 28px 60px rgba(15,23,32,.14); background:#0F1720;
+}
+.case-slide{
+  position:absolute; inset:0; opacity:0; transform:scale(1.01);
+  transition:opacity .28s ease, transform .28s ease; pointer-events:none;
+}
+.case-slide.active{opacity:1; transform:scale(1); pointer-events:auto}
+.case-art{
+  width:100%; height:100%; display:grid; place-items:center;
+  position:relative; padding:28px; color:#fff;
+}
+.case-art h3{margin:0; font-size:54px; line-height:.92; letter-spacing:-.05em}
+.case-art p{margin:10px 0 0; font-size:14px; line-height:1.55; max-width:280px}
+.case-art small{display:block; margin-bottom:10px; font-size:12px; letter-spacing:.2em; text-transform:uppercase; opacity:.84}
+.case-manifestation{
+  background:
+    radial-gradient(circle at 32% 30%, rgba(126,209,178,.4), transparent 16%),
+    radial-gradient(circle at 78% 24%, rgba(0,224,255,.28), transparent 14%),
+    linear-gradient(135deg, #F5FBF7 0%, #DDF8FF 100%);
+  color:#0F1720;
+}
+.case-manifestation:before,
+.case-fjord:before{
+  content:""; position:absolute; inset:18px; border:1px solid rgba(15,23,32,.08); border-radius:22px;
+}
+.case-manifestation .sun{
+  position:absolute; top:46px; right:50px; width:74px; height:74px; border-radius:999px;
+  background:linear-gradient(135deg, var(--natural), var(--electric));
+  box-shadow:0 18px 44px rgba(0,224,255,.18);
+}
+.case-manifestation .line,
+.case-fjord .wave{
+  position:absolute; left:0; right:0; bottom:24px; height:16px;
+  background:radial-gradient(circle at 8px -2px, transparent 12px, #7DDCE8 13px, #7DDCE8 15px, transparent 16px) repeat-x;
+  background-size:32px 16px; opacity:.9;
+}
+.case-fjord{
+  background:linear-gradient(135deg, #EFE8D7 0%, #DDECF0 100%);
+  color:#0F1720;
+}
+.case-fjord .fish{
+  position:absolute; top:46px; left:50%; transform:translateX(-50%);
+  display:flex; gap:16px; color:#2CC7D6; font-size:18px;
+}
+.case-mint{
+  background:linear-gradient(180deg, #CFE4FF 0%, #EAF4FF 46%, #FFFFFF 100%);
+  color:#0F1720;
+}
+.case-mint .building{
+  position:absolute; bottom:0; width:58%; height:68%; border-radius:16px 16px 0 0;
+  background:linear-gradient(180deg,#4A9BFF,#2E72D8); box-shadow:inset 0 0 0 2px rgba(255,255,255,.2);
+}
+.case-mint .building:before,
+.case-mint .building:after{
+  content:""; position:absolute; inset:16px;
+  background:linear-gradient(90deg, rgba(255,255,255,.72) 0 10%, transparent 10% 18%) repeat;
+  background-size:42px 100%; opacity:.46;
+}
+.case-mint .building:after{
+  inset:auto 12% 0 auto; width:36%; height:84%; border-radius:16px 16px 0 0;
+  background:linear-gradient(180deg,#68B5FF,#3786EA);
+}
+.case-mint .logo{
+  position:absolute; right:30px; bottom:26px; font-size:38px; font-weight:800; color:#FFFFFF;
+}
+.case-caption{
+  position:absolute; background:rgba(255,255,255,.92); backdrop-filter:blur(12px);
+  border:1px solid var(--line); border-radius:22px; box-shadow:var(--shadow);
+  padding:16px 18px; max-width:220px; z-index:3;
+}
+.case-caption small{
+  display:block; margin-bottom:8px; color:var(--electric-deep); font-size:12px;
+  letter-spacing:.18em; text-transform:uppercase; font-weight:800;
+}
+.case-caption strong{display:block; font-size:16px; line-height:1.25}
+.case-caption span{display:block; margin-top:6px; color:var(--muted); line-height:1.45}
+.caption-right{right:26px; top:214px}
+.caption-bottom{left:26px; bottom:28px}
+.hero-stage > .hero-blob,
+.hero-stage > .hero-wave,
+.hero-stage > .hero-core,
+.hero-stage > .hero-panel{display:none}
+
 .stats{
   display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:-18px;
 }
@@ -391,6 +510,10 @@ button,input,textarea{font:inherit}
   .acc-price{display:none}
   .acc-title{font-size:30px}
   .hero-visual{min-height:460px}
+  .hero-stage{min-height:620px}
+  .case-card{inset:150px 28px 84px 28px}
+  .caption-right{top:auto; right:20px; bottom:20px}
+  .caption-bottom{display:none}
 }
 @media (max-width:560px){
   .container{width:min(var(--container), calc(100% - 24px))}
@@ -429,8 +552,57 @@ button,input,textarea{font:inherit}
       </div>
       <a class="hero-mail" href="mailto:elena@shitikova.design">elena@shitikova.design</a>
     </div>
-    <div class="hero-visual">
+    <div class="hero-stage">
       <div class="hero-topbar"><span></span><span></span><span></span></div>
+      <div class="case-switcher">
+        <button class="case-btn active" type="button" data-case="manifestation">Manifestation</button>
+        <button class="case-btn" type="button" data-case="fjord">Fjord</button>
+        <button class="case-btn" type="button" data-case="mint">MINT</button>
+      </div>
+      <div class="case-bg-blob a"></div>
+      <div class="case-bg-blob b"></div>
+      <div class="case-card">
+        <div class="case-media">
+          <div class="case-slide active" data-slide="manifestation">
+            <div class="case-art case-manifestation">
+              <div class="sun"></div>
+              <div>
+                <small>Identity</small>
+                <h3>Manifestation</h3>
+                <p>РђР№РґРµРЅС‚РёРєР° РґР»СЏ wellness-РїСЂРѕРµРєС‚Р°: С‚РµРїР»Рѕ, РґС‹С…Р°РЅРёРµ Рё СЃРїРѕРєРѕР№РЅС‹Р№ СЂРёС‚Рј.</p>
+              </div>
+              <div class="line"></div>
+            </div>
+          </div>
+          <div class="case-slide" data-slide="fjord">
+            <div class="case-art case-fjord">
+              <div class="fish">◁ ◁ ◁</div>
+              <div>
+                <small>Brand identity</small>
+                <h3>Fjord</h3>
+                <p>РЎРєР°РЅРґРёРЅР°РІСЃРєР°СЏ С‡РёСЃС‚РѕС‚Р°, СЃРїРѕРєРѕР№РЅС‹Р№ СЂРёС‚Рј Рё Р°С‚РјРѕСЃС„РµСЂРЅС‹Р№ nordic-РІРёР·СѓР°Р».</p>
+              </div>
+              <div class="wave"></div>
+            </div>
+          </div>
+          <div class="case-slide" data-slide="mint">
+            <div class="case-art case-mint">
+              <div class="building"></div>
+              <div class="logo">MINT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-caption caption-right" id="captionMain">
+        <small>CASE</small>
+        <strong>Manifestation</strong>
+        <span>Yoga Festival Identity</span>
+      </div>
+      <div class="case-caption caption-bottom" id="captionText">
+        <small>ABOUT PROJECT</small>
+        <strong>РђР№РґРµРЅС‚РёРєР° РґР»СЏ Р°С‚РјРѕСЃС„РµСЂРЅРѕРіРѕ wellness-РїСЂРѕРµРєС‚Р°</strong>
+        <span>РўРёС…Р°СЏ, СЃРІРµС‚Р»Р°СЏ Рё СЃРѕР±СЂР°РЅРЅР°СЏ СЃРёСЃС‚РµРјР° СЃ РѕС‰СѓС‰РµРЅРёРµРј С‚РµРїР»Р°, РґС‹С…Р°РЅРёСЏ Рё РІРЅСѓС‚СЂРµРЅРЅРµРіРѕ Р±Р°Р»Р°РЅСЃР°.</span>
+      </div>
       <div class="hero-blob a"></div>
       <div class="hero-blob b"></div>
       <div class="hero-frame"></div>
@@ -669,6 +841,46 @@ button,input,textarea{font:inherit}
 </footer>
 
 <script>
+const caseContent = {
+  manifestation: {
+    title: 'Manifestation',
+    subtitle: 'Yoga Festival Identity',
+    textTitle: 'Айдентика для атмосферного wellness-проекта',
+    text: 'Тихая, светлая и собранная система с ощущением тепла, дыхания и внутреннего баланса.'
+  },
+  fjord: {
+    title: 'Fjord',
+    subtitle: 'Scandinavian Bistro Identity',
+    textTitle: 'Фирменный стиль для бистро в скандинавском духе',
+    text: 'Лаконичная графика, чистое пространство и аккуратная северная атмосфера без лишнего шума.'
+  },
+  mint: {
+    title: 'MINT',
+    subtitle: 'Tech Brand Identity',
+    textTitle: 'Айдентика для технологичного бренда',
+    text: 'Более строгий и корпоративный кейс: ясная структура, чистый знак и производственный масштаб.'
+  }
+};
+
+const caseButtons = document.querySelectorAll('.case-btn');
+const caseSlides = document.querySelectorAll('.case-slide');
+const captionMain = document.getElementById('captionMain');
+const captionText = document.getElementById('captionText');
+
+caseButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const key = btn.dataset.case;
+    const content = caseContent[key];
+
+    if (!content || !captionMain || !captionText) return;
+
+    caseButtons.forEach((item) => item.classList.toggle('active', item === btn));
+    caseSlides.forEach((slide) => slide.classList.toggle('active', slide.dataset.slide === key));
+    captionMain.innerHTML = `<small>CASE</small><strong>${content.title}</strong><span>${content.subtitle}</span>`;
+    captionText.innerHTML = `<small>ABOUT PROJECT</small><strong>${content.textTitle}</strong><span>${content.text}</span>`;
+  });
+});
+
 document.querySelectorAll('.acc').forEach((item, index) => {
   const btn = item.querySelector('.acc-btn');
   const panel = item.querySelector('.acc-panel');
