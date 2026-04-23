@@ -5,8 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Елена Шитикова — Final Palette</title>
 <meta name="description" content="Бренд-дизайн, айдентика, карточки для маркетплейсов, полиграфия и иллюстрации. Портфолио и услуги Елены Шитиковой." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
+  --font-main:"Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   --bg:#FFFFFF;
   --bg-soft:#F8FAFC;
   --card:#FFFFFF;
@@ -30,7 +35,7 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-family:var(--font-main);
   color:var(--text);
   background:var(--page-gradient);
   background-attachment:fixed;
@@ -45,12 +50,13 @@ button,input,textarea{font:inherit}
 .section-dark{background:linear-gradient(180deg, #0F1720 0%, #111C27 100%); color:#fff}
 .eyebrow{
   display:inline-block; margin-bottom:18px; font-size:12px; letter-spacing:.22em;
-  text-transform:uppercase; font-weight:800; color:var(--electric-deep);
+  text-transform:uppercase; font-weight:700; color:var(--electric-deep);
+  font-family:var(--font-mono);
 }
 .section-dark .eyebrow{color:#97EFFF}
 .title{
-  margin:0; font-size:clamp(40px,5.8vw,88px); line-height:.96;
-  letter-spacing:-.055em; font-weight:800;
+  margin:0; font-size:clamp(40px,5.4vw,80px); line-height:.96;
+  letter-spacing:-.05em; font-weight:700;
 }
 .title .accent{
   background:linear-gradient(90deg, #72E8C9 0%, #35D8DA 46%, #11CBEF 100%);
@@ -68,7 +74,7 @@ button,input,textarea{font:inherit}
 .header .container{
   min-height:80px; display:flex; align-items:center; justify-content:space-between; gap:24px;
 }
-.brand{font-weight:800; letter-spacing:.08em; text-transform:uppercase}
+.brand{font-family:var(--font-mono); font-weight:700; letter-spacing:.08em; text-transform:uppercase}
 .nav{display:flex; gap:26px; font-size:14px; color:#4E5863}
 .nav a{position:relative}
 .nav a:after{
@@ -309,7 +315,7 @@ button,input,textarea{font:inherit}
 }
 .case-caption small{
   display:block; margin-bottom:8px; color:var(--electric-deep); font-size:12px;
-  letter-spacing:.18em; text-transform:uppercase; font-weight:800;
+  letter-spacing:.18em; text-transform:uppercase; font-weight:700;
 }
 .case-caption strong{display:block; font-size:16px; line-height:1.25}
 .case-caption span{display:block; margin-top:6px; color:var(--muted); line-height:1.45; overflow-wrap:break-word}
@@ -367,7 +373,7 @@ button,input,textarea{font:inherit}
 }
 .point .num{
   display:inline-flex; min-width:52px; width:max-content; padding:7px 13px; border-radius:999px;
-  background:var(--natural-soft); color:var(--electric-deep); font-weight:800; margin-bottom:12px;
+  background:var(--natural-soft); color:var(--electric-deep); font-weight:700; margin-bottom:12px;
 }
 .point h3{margin:0 0 8px; font-size:21px; line-height:1.12}
 .point p{margin:0; color:var(--muted); line-height:1.52}
@@ -388,7 +394,7 @@ button,input,textarea{font:inherit}
   font-size:44px; line-height:1; font-weight:800; letter-spacing:-.05em; color:var(--electric-deep);
 }
 .acc-title{
-  font-size:clamp(28px,3.6vw,50px); line-height:1; letter-spacing:-.04em; font-weight:800;
+  font-size:21px; line-height:1.18; letter-spacing:-.015em; font-weight:700;
 }
 .acc-sub{margin-top:8px; color:var(--muted)}
 .acc-price{text-align:right}
@@ -423,6 +429,19 @@ button,input,textarea{font:inherit}
   text-transform:uppercase; color:var(--electric-deep);
 }
 .note ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.72}
+.service-format{
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--bg-soft);
+}
+.service-format + .service-format{margin-top:12px}
+.service-format h4{
+  margin:0 0 8px;
+  font-size:18px;
+  line-height:1.2;
+}
+.service-format p{margin:0; color:var(--muted); line-height:1.55}
 
 .process-grid,.portfolio-grid{
   display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
@@ -456,7 +475,7 @@ button,input,textarea{font:inherit}
   display:none;
 }
 .box h3{
-  margin:0 0 10px; font-size:34px; line-height:1; letter-spacing:-.04em;
+  margin:0 0 10px; font-size:34px; line-height:1; letter-spacing:-.035em; font-weight:700;
 }
 .box p{
   margin:0; color:rgba(255,255,255,.72); line-height:1.7;
@@ -484,7 +503,7 @@ button,input,textarea{font:inherit}
 .tag{
   display:inline-flex; padding:9px 14px; border-radius:999px;
   background:var(--natural-soft); color:var(--electric-deep);
-  font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase;
+  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
 }
 .work h3{margin:14px 0 8px; font-size:28px; line-height:1.08}
 .work p{margin:0; color:var(--muted); line-height:1.55}
@@ -507,24 +526,30 @@ button,input,textarea{font:inherit}
 }
 .avatar{
   width:52px; height:52px; border-radius:999px; display:grid; place-items:center;
-  background:var(--natural-soft); color:var(--electric-deep); font-weight:800;
+  background:var(--natural-soft); color:var(--electric-deep); font-weight:700;
 }
 .author span{display:block; color:var(--muted)}
 
-.contact-shell{padding:30px}
+.contact-shell{padding:clamp(22px,3vw,34px)}
+#contact.section{padding:clamp(34px,6vh,68px) 0}
+.contact-head{
+  max-width:none;
+  margin-bottom:24px;
+}
+.contact-head .lead{max-width:760px}
 .contact-grid{
-  display:grid; grid-template-columns:.95fr 1.05fr; gap:24px;
+  display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(18px,3vw,32px); align-items:start;
 }
 .contact-links{
-  display:grid; gap:14px; margin-top:26px;
+  display:grid; gap:12px;
 }
 .contact-link{
-  display:flex; gap:14px; align-items:center; padding:16px;
+  display:flex; gap:14px; align-items:center; padding:14px;
   border-radius:20px; background:var(--bg-soft); border:1px solid var(--line);
 }
 .ic{
-  width:48px; height:48px; border-radius:16px; display:grid; place-items:center;
-  background:var(--natural-soft); color:var(--electric-deep); font-weight:800;
+  width:44px; height:44px; border-radius:14px; display:grid; place-items:center;
+  background:var(--natural-soft); color:var(--electric-deep); font-weight:700;
 }
 .contact-link small{
   display:block; margin-bottom:4px; color:var(--muted);
@@ -533,13 +558,13 @@ button,input,textarea{font:inherit}
 .field{margin-bottom:14px}
 .field label{
   display:block; margin-bottom:8px; font-size:12px; letter-spacing:.18em;
-  text-transform:uppercase; color:var(--electric-deep); font-weight:800;
+  text-transform:uppercase; color:var(--electric-deep); font-weight:700;
 }
 .field input,.field textarea{
-  width:100%; min-height:56px; padding:16px 18px; border-radius:18px;
+  width:100%; min-height:52px; padding:14px 18px; border-radius:18px;
   outline:none; border:1px solid var(--line); background:#fff; color:var(--text);
 }
-.field textarea{min-height:150px; resize:vertical}
+.field textarea{min-height:122px; resize:vertical}
 .field input:focus,.field textarea:focus{
   border-color:var(--electric); box-shadow:0 0 0 4px rgba(0,224,255,.10);
 }
@@ -582,7 +607,7 @@ button,input,textarea{font:inherit}
   .process-grid,.portfolio-grid,.reviews-grid,.about-points{grid-template-columns:1fr}
   .acc-btn{grid-template-columns:56px 1fr 52px}
   .acc-price{display:none}
-  .acc-title{font-size:30px}
+  .acc-title{font-size:21px}
   .hero-visual{min-height:460px}
   .hero-stage{height:560px; min-height:0}
   .about-art{min-height:300px}
@@ -721,29 +746,15 @@ button,input,textarea{font:inherit}
 
     <div class="accordion">
       <article class="acc">
-        <button class="acc-btn" type="button"><div class="acc-num">01</div><div><div class="acc-title">Логотип — Эконом</div><div class="acc-sub">Отрисовка логотипа в вектор по вашему эскизу</div></div><div class="acc-price"><strong>от 7 000 ₽</strong><span>от 3 дней</span></div><div class="acc-plus">+</div></button>
+        <button class="acc-btn" type="button"><div class="acc-num">01</div><div><div class="acc-title">Логотип</div><div class="acc-sub">Доступно два формата: отрисовка по эскизу или разработка с нуля</div></div><div class="acc-price"><strong>от 7 000 ₽</strong><span>от 3 дней</span></div><div class="acc-plus">+</div></button>
         <div class="acc-panel"><div class="acc-inner"><div class="features">
-          <div class="feature"><i></i><span>Отрисовка логотипа в векторный формат по вашему эскизу + доработка.</span></div>
-          <div class="feature"><i></i><span>Подбор шрифтов и фирменной цветовой палитры.</span></div>
-          <div class="feature"><i></i><span>Визуализация на мокапах.</span></div>
-          <div class="feature"><i></i><span>Исходные файлы для печати и web.</span></div>
-          <div class="feature"><i></i><span>1 итерация.</span></div>
-        </div><div class="note"><h4>Формат</h4><ul><li>Быстрый старт для небольших проектов.</li><li>Подходит, если есть понятный эскиз.</li><li>Хороший вариант для аккуратной векторной доработки.</li></ul></div></div></div>
+          <div class="service-format"><h4>Эконом — от 7 000 ₽</h4><p>Отрисовка логотипа в вектор по вашему эскизу, доработка формы, подбор шрифтов и палитры. Включает визуализацию на мокапах, исходные файлы для печати и web, 1 итерацию.</p></div>
+          <div class="service-format"><h4>Стандарт — от 15 000 ₽</h4><p>Разработка логотипа с нуля или рестайлинг: анализ брифа, ниши, аудитории и конкурентов, мудборд, 3 варианта логотипа, палитра, шрифты, логобук и 3 итерации в рамках ТЗ.</p></div>
+        </div><div class="note"><h4>Как выбрать</h4><ul><li>Эконом подойдёт, если уже есть понятный эскиз и нужно аккуратно довести его до рабочего файла.</li><li>Стандарт лучше выбрать для нового бренда, рестайлинга или задачи, где нужен осмысленный знак и система версий.</li><li>Оба формата включают подготовку файлов для реального использования.</li></ul></div></div></div>
       </article>
 
       <article class="acc">
-        <button class="acc-btn" type="button"><div class="acc-num">02</div><div><div class="acc-title">Логотип — Стандарт</div><div class="acc-sub">Разработка логотипа с нуля или рестайлинг</div></div><div class="acc-price"><strong>от 15 000 ₽</strong><span>от 5 дней</span></div><div class="acc-plus">+</div></button>
-        <div class="acc-panel"><div class="acc-inner"><div class="features">
-          <div class="feature"><i></i><span>Анализ брифа, постановка цели и задач.</span></div>
-          <div class="feature"><i></i><span>Анализ ниши, аудитории и конкурентов.</span></div>
-          <div class="feature"><i></i><span>Создание мудборда и 3 вариантов логотипа.</span></div>
-          <div class="feature"><i></i><span>Подбор шрифтов, палитры, логобук.</span></div>
-          <div class="feature"><i></i><span>3 итерации в рамках ТЗ.</span></div>
-        </div><div class="note"><h4>Подходит для</h4><ul><li>Нового бренда или аккуратного обновления существующего.</li><li>Проектов, где нужен осмысленный знак и система версий.</li><li>Бизнесов, которые хотят выглядеть увереннее и дороже.</li></ul></div></div></div>
-      </article>
-
-      <article class="acc">
-        <button class="acc-btn" type="button"><div class="acc-num">03</div><div><div class="acc-title">Фирменный стиль</div><div class="acc-sub">Полная визуальная идентичность бренда</div></div><div class="acc-price"><strong>от 30 000 ₽</strong><span>от 2 недель</span></div><div class="acc-plus">+</div></button>
+        <button class="acc-btn" type="button"><div class="acc-num">02</div><div><div class="acc-title">Фирменный стиль</div><div class="acc-sub">Полная визуальная идентичность бренда</div></div><div class="acc-price"><strong>от 30 000 ₽</strong><span>от 2 недель</span></div><div class="acc-plus">+</div></button>
         <div class="acc-panel"><div class="acc-inner"><div class="features">
           <div class="feature"><i></i><span>Анализ брифа, ценностей, миссии и аудитории бренда.</span></div>
           <div class="feature"><i></i><span>Разработка логотипа и краткой версии.</span></div>
@@ -754,7 +765,7 @@ button,input,textarea{font:inherit}
       </article>
 
       <article class="acc">
-        <button class="acc-btn" type="button"><div class="acc-num">04</div><div><div class="acc-title">Карточки для маркетплейсов</div><div class="acc-sub">Дизайн для Wildberries, OZON и других платформ</div></div><div class="acc-price"><strong>от 700 ₽</strong><span>от 3 дней</span></div><div class="acc-plus">+</div></button>
+        <button class="acc-btn" type="button"><div class="acc-num">03</div><div><div class="acc-title">Карточки для маркетплейсов</div><div class="acc-sub">Дизайн для Wildberries, OZON и других платформ</div></div><div class="acc-price"><strong>от 700 ₽</strong><span>от 3 дней</span></div><div class="acc-plus">+</div></button>
         <div class="acc-panel"><div class="acc-inner"><div class="features">
           <div class="feature"><i></i><span>Разработка дизайна с учётом правил оферты маркетплейса.</span></div>
           <div class="feature"><i></i><span>Главная карточка — 1000 ₽, последующие слайды — 700 ₽.</span></div>
@@ -765,7 +776,7 @@ button,input,textarea{font:inherit}
       </article>
 
       <article class="acc">
-        <button class="acc-btn" type="button"><div class="acc-num">05</div><div><div class="acc-title">Дизайн для соцсетей</div><div class="acc-sub">Оформление ВКонтакте, Instagram и других платформ</div></div><div class="acc-price"><strong>от 700 ₽</strong><span>от 5 дней</span></div><div class="acc-plus">+</div></button>
+        <button class="acc-btn" type="button"><div class="acc-num">04</div><div><div class="acc-title">Дизайн для соцсетей</div><div class="acc-sub">Оформление ВКонтакте, Instagram и других платформ</div></div><div class="acc-price"><strong>от 700 ₽</strong><span>от 5 дней</span></div><div class="acc-plus">+</div></button>
         <div class="acc-panel"><div class="acc-inner"><div class="features">
           <div class="feature"><i></i><span>Аватар, обложка, мобильная обложка, меню сообщества.</span></div>
           <div class="feature"><i></i><span>Шаблоны постов и сторис под единый стиль бренда.</span></div>
@@ -776,7 +787,7 @@ button,input,textarea{font:inherit}
       </article>
 
       <article class="acc">
-        <button class="acc-btn" type="button"><div class="acc-num">06</div><div><div class="acc-title">Полиграфия</div><div class="acc-sub">Визитки, буклеты, сертификаты и другая печатная продукция</div></div><div class="acc-price"><strong>от 700 ₽</strong><span>от 3 дней</span></div><div class="acc-plus">+</div></button>
+        <button class="acc-btn" type="button"><div class="acc-num">05</div><div><div class="acc-title">Полиграфия</div><div class="acc-sub">Визитки, буклеты, сертификаты и другая печатная продукция</div></div><div class="acc-price"><strong>от 700 ₽</strong><span>от 3 дней</span></div><div class="acc-plus">+</div></button>
         <div class="acc-panel"><div class="acc-inner"><div class="features">
           <div class="feature"><i></i><span>Визитка — от 1500 ₽, буклет/брошюра — от 3500 ₽.</span></div>
           <div class="feature"><i></i><span>Сертификат — от 3000 ₽, афиша/плакат — от 5000 ₽.</span></div>
@@ -787,7 +798,7 @@ button,input,textarea{font:inherit}
       </article>
 
       <article class="acc">
-        <button class="acc-btn" type="button"><div class="acc-num">07</div><div><div class="acc-title">Иллюстрация</div><div class="acc-sub">Стикеры, персонажи, книжные иллюстрации и многое другое</div></div><div class="acc-price"><strong>от 700 ₽</strong><span>от 5 дней</span></div><div class="acc-plus">+</div></button>
+        <button class="acc-btn" type="button"><div class="acc-num">06</div><div><div class="acc-title">Иллюстрация</div><div class="acc-sub">Стикеры, персонажи, книжные иллюстрации и многое другое</div></div><div class="acc-price"><strong>от 700 ₽</strong><span>от 5 дней</span></div><div class="acc-plus">+</div></button>
         <div class="acc-panel"><div class="acc-inner"><div class="features">
           <div class="feature"><i></i><span>Стикеры текстовые и простые — от 700 ₽ за штуку.</span></div>
           <div class="feature"><i></i><span>Стикеры иллюстративные — от 1000 ₽, сложный дизайн — от 1500 ₽.</span></div>
@@ -876,11 +887,13 @@ button,input,textarea{font:inherit}
 <section class="section" id="contact">
   <div class="container">
     <div class="contact-shell">
+      <div class="contact-head">
+        <div class="eyebrow">Контакт</div>
+        <h2 class="title">Давайте обсудим<br><span class="accent">ваш проект</span></h2>
+        <p class="lead">Заполните форму или напишите мне напрямую — отвечу в течение 24 часов.</p>
+      </div>
       <div class="contact-grid">
         <div>
-          <div class="eyebrow">Контакт</div>
-          <h2 class="title">Давайте обсудим <span class="accent">ваш проект</span></h2>
-          <p class="lead">Заполните форму или напишите мне напрямую — отвечу в течение 24 часов.</p>
           <div class="contact-links">
             <a class="contact-link" href="https://t.me/designer" target="_blank" rel="noopener"><div class="ic">✈</div><div><small>Telegram</small><strong>@designer</strong></div></a>
             <a class="contact-link" href="mailto:hello@designer.ru"><div class="ic">✉</div><div><small>Email</small><strong>hello@designer.ru</strong></div></a>
